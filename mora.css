@@ -1,0 +1,1265 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+@view-transition {
+  navigation: auto;
+}
+
+
+html,body{
+  width: 100%;
+    min-height: 100%;
+    margin: 0;
+  background-color:white;
+  scroll-behavior: smooth;
+     overflow-x: hidden;
+    
+
+}
+
+
+#page {
+    width: 100%;
+        min-height: 100vh;
+}
+
+::selection {
+  background: #fbd7ff;
+}
+
+
+
+#name{
+  position: fixed;
+  top: 110px;
+  width: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  cursor: pointer;  
+}
+
+
+
+
+
+
+
+
+
+
+.intro-container {
+position: absolute;
+   top: 110px;
+    width:250px;
+    left: 50%;
+  transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+    z-index: 200;
+
+}
+
+
+.pulse-glow-logo {
+  width: 250px; 
+ 
+
+  filter: drop-shadow(0 0 0px rgba(0, 191, 255, 0));
+  
+ 
+  animation: introPulse 1.2s ease-in-out 1;
+ 
+  transition: filter 0.4s ease-in-out;
+}
+
+
+.pulse-glow-logo:hover {
+  filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);}
+
+
+
+
+
+/*  The 3-Pulse  */
+@keyframes introPulse {
+  0% {
+    filter: drop-shadow(0 0 0px #a5bcff)
+          drop-shadow(0 0 0px #a5bcff);
+    
+  }
+  50% {
+   
+    filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+
+  }
+  
+}
+
+
+
+
+
+#portfolio{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ font-family: "Doto", sans-serif;
+  font-weight: regular;
+  font-size: 15px;
+  color: black;
+  z-index: 1001;
+}
+
+
+
+#lotus{
+  position: fixed;
+  top: 70px;
+  width: 3%;
+  left: 91%;
+  transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+  z-index: 1000;
+}
+#lotus:hover{
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+#insta{
+position: fixed;  
+top: 103px;
+left: 90%;
+font-family: "Source Sans 3", sans-serif;
+
+font-size: 15px;
+text-align: right;
+color: black;
+  text-decoration: none;
+z-index: 1000;
+
+}
+#insta:hover{
+  text-decoration: underline;
+  }
+
+
+#undie{
+  position: fixed;
+  top: 170px;
+  width: 3%;
+  left: 91%;
+  transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 6px #c7fffc)
+          drop-shadow(0 0 12px #c7fffc);
+         
+  z-index: 1000;
+}
+#undie:hover{
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+#playlist{
+position: fixed;  
+top: 200px;
+left: 90.5%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+  text-decoration: none;
+z-index: 1000;
+
+}
+#playlist:hover{
+  text-decoration: underline;
+  }
+
+
+
+
+#about{
+position: fixed;  
+top: 120px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #dcdce2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #dcdce2;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#about:hover {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color:#c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+
+
+#projects_button{
+position: fixed;  
+top: 60px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+background-color:#c7fffc;
+  border: 1px solid #c7fffc;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#projects_button:hover {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color:#c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#wordcontact{
+position: fixed;  
+top: 180px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #dcdce2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #dcdce2;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#wordcontact:hover,
+#wordcontact.active {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+
+#contactcard {
+  position: fixed;
+  top: 42%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  display: none; 
+  z-index: 1000;
+}
+
+#contactcard img {
+  width: 300px; 
+  display: block;
+}
+
+
+.contact-content {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 85%; 
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: left; 
+}
+
+
+.contact-content p {
+  margin: 1px 0; 
+  font-weight: bold;
+}
+
+
+.contact-content a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  transition: color 0.2s ease-in-out;
+}
+
+.contact-content a:hover {
+  color: #fbd7ff;
+}
+
+
+#closePopup {
+  position: absolute;
+  top: 136px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: lighter;
+  color: black;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#closePopup:hover {
+  color: #fbd7ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.imagegrid .reveal:nth-child(even) {
+  transition-delay: 0.20s;
+}
+.imagegrid2 .reveal:nth-child(even) {
+  transition-delay: 0.20s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#title1{
+  position: absolute;
+  top: 27%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 20;
+
+}
+
+
+#title2{
+  position: absolute;
+  top: 27%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  left: 20%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 20;
+
+}
+
+
+
+#title3{
+  position: absolute;
+  top: 27%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  left: 80%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 20;
+
+}
+
+
+
+
+#client{
+position: absolute;
+top: 64%;  
+left: 50%;
+transform: translate(-50%, -50%); 
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+
+#header_image {
+  position: fixed;
+  top: 49%;
+  width: 20%;         /*when max width 600 px this goes to 50%*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+will-change: transform;
+  filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+}
+
+
+
+
+
+
+.about_mora {
+position: absolute;
+top: 83%;   /*when max width 600 px this goes to 95%   83*/ 
+max-width: 450px; 
+left: 50%;
+transform: translate(-50%, -50%); 
+z-index: 50;
+z-index: 200;
+}
+
+
+.about_mora p {
+  font-family: "Source Sans 3", sans-serif; 
+  font-size: 15px;
+  color: black;   
+  line-height: 1.4;  
+  text-align: center;
+  margin: 5px ;
+}
+
+
+.about_mora a{
+
+  text-decoration: none;
+  color: #a5bcff;
+}
+
+
+
+#link1:hover {
+  color:#fbd7ff
+}
+
+#link2:hover {
+  color:#fbd7ff
+}
+
+
+#link3:hover {
+  color:#fbd7ff
+}
+
+
+
+
+
+
+
+
+
+#cards{
+  position: absolute;
+  top: 100%;  /*when max width 600 px this goes to 125%%  100 */
+  width: 100%;
+}
+
+
+
+
+
+
+
+/* --- Master Wrapper to align with your top elements --- */
+.logo-iterations-wrapper {
+  position: absolute;
+  top: 330%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+
+/* --- Flexible Layout Containers --- */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 50px;          /* Vertical gap between Logo 1 and the row below */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;          /* Horizontal gap between Logo 2 and Logo 3 */
+}
+
+/* --- Individual Logo Components --- */
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  flex: 1;             
+}
+
+.logo-item img {
+  max-width: 600px; 
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+#l1, #l2, #l3 {
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 15px;    
+  margin-bottom: 0;
+}
+
+
+
+#logo1.reveal { transition-delay: 0s; }
+#logo2.reveal { transition-delay: 0.2s; }
+#logo3.reveal { transition-delay: 0.4s; }
+
+
+.iterations-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;    
+}
+
+
+#business {
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+.imagegrid {
+  position: absolute;
+  top: 182%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.imagegrid img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#title10{
+  position: absolute;
+  top: 638%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 20;
+
+}
+
+
+#title20{
+  position: absolute;
+  top: 638%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  left: 20%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 20;
+
+}
+
+
+
+#title30{
+  position: absolute;
+  top: 638%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  left: 80%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 20;
+
+}
+
+
+
+
+#client2{
+position: absolute;
+top: 675%;  
+left: 50%;
+transform: translate(-50%, -50%); 
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+
+#sien_icon {
+  position: fixed;
+  top: 0;
+  width: 12%;         /*when max width 600 px this goes to 50%*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+will-change: transform;
+}
+
+
+
+
+
+
+.about_sien {
+position: absolute;
+top: 693%;   /*when max width 600 px this goes to 95%   83*/ 
+max-width: 450px; 
+left: 50%;
+transform: translate(-50%, -50%); 
+z-index: 50;
+z-index: 200;
+}
+
+
+.about_sien p {
+  font-family: "Source Sans 3", sans-serif; 
+  font-size: 15px;
+  color: black;   
+  line-height: 1.4;  
+  text-align: center;
+  margin: 5px ;
+}
+
+
+.about_sien a{
+
+  text-decoration: none;
+  color: #ec008c;
+}
+
+
+
+#link10:hover {
+  color:#c7fffc;
+}
+
+
+
+
+
+#sien_video{
+  position: absolute;
+top: 780%;
+left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+
+
+
+
+
+
+
+.iterations-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;    
+}
+
+
+#posters {
+  position: absolute;
+  top: 857%;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+.imagegrid2 {
+  position: absolute;
+  top: 1045%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.imagegrid2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+
+
+
+
+
+
+/* Container hides horizontal overflow */
+.marquee-container {
+  overflow: hidden;
+  position: absolute;
+top: 30%;
+  width: 100%;
+  background: transparent;
+  padding: 40px 0;
+  display: flex;
+ 
+  z-index: 100;
+}
+
+/* The track holding all items */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 10px;
+  animation: scrollMarquee 20s linear infinite; 
+}
+
+/* Individual media containers */
+.marquee-item {
+  width: 350px;
+  height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  
+  
+  /* Blurry by default */
+  filter: blur(0px);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.marquee-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- THE HOVER TRICK --- */
+
+/* 1. Pause the entire track animation when ANY item is hovered */
+.marquee-track:has(.marquee-item:hover) {
+  animation-play-state: paused;
+}
+
+/* 2. Clear the blur and slightly scale up the specific hovered item */
+.marquee-item:hover {
+  filter: blur(0px);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Infinite loop keyframe: moves exactly halfway (the length of one full set) */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container hides horizontal overflow */
+.marquee-container2 {
+  overflow: hidden;
+  position: absolute;
+top: 640%;
+  width: 100%;
+  background: transparent;
+  padding: 40px 0;
+  display: flex;
+ 
+  z-index: 100;
+}
+
+/* The track holding all items */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 10px;
+  animation: scrollMarquee 20s linear infinite; 
+}
+
+/* Individual media containers */
+.marquee-item {
+  width: 350px;
+  height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  
+  
+  /* Blurry by default */
+  filter: blur(0px);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.marquee-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- THE HOVER TRICK --- */
+
+/* 1. Pause the entire track animation when ANY item is hovered */
+.marquee-track:has(.marquee-item:hover) {
+  animation-play-state: paused;
+}
+
+/* 2. Clear the blur and slightly scale up the specific hovered item */
+.marquee-item:hover {
+  filter: blur(0px);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Infinite loop keyframe: moves exactly halfway (the length of one full set) */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#copyright{
+  position: absolute;
+  top: 1240%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  color: black;
+   opacity: 0.6;
+ padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   📱 Mobile Responsive Breakpoint
+   ========================================== */
+
+
+@media (max-width: 768px) {
+
+
+#name{
+  width: 50%;
+}
+
+
+#lotus{
+width: 7%;
+  left: 89%;
+
+}
+
+#undie{
+width: 7%;
+  left: 89%;
+
+}
+#insta{
+top: 100px;
+left: 85%;
+
+}
+
+#playlist{
+  top: 197px; 
+left: 86%; 
+}
+
+#contactcard{
+  left: 33%;
+}
+
+
+
+  .logo-row {
+    flex-direction: column; /* Stacks Logo 2 and 3 vertically on mobile */
+    gap: 50px;              
+  }
+
+  .logo-item img {
+    max-width: 60%;         
+  }
+
+
+#business {
+  margin-bottom: 0px;}
+
+
+
+
+
+#cards{
+  top: 120%;  
+}
+
+
+
+
+.about_mora {
+top: 87%;
+width: 70%;
+  max-width: 600px;
+ }
+
+
+
+
+
+
+#header_image {
+  width: 50%;         /*when max width 600 px this goes to 50%*/}
+
+
+
+
+
+
+.logo-iterations-wrapper {
+  width: 117%;
+  top: 210%;
+}
+
+
+.iterations-section {
+  margin-top: 50px;    
+
+}
+
+
+.about_mora p {
+  text-align: center;
+}
+
+.imagegrid{
+  top: 140%;
+  gap: 10px;
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+#sien_icon{
+width: 30%;
+
+}
+
+
+.marquee-container2 {
+  top: 412%;
+
+}
+
+
+#title10{
+  top: 410%;
+
+}
+
+
+
+#title20{
+top: 410%;
+left: 25% ;
+}
+
+
+
+#title30{
+top: 410%;
+left: 75%;
+}
+
+
+
+
+
+
+#client2{
+  top: 447%;
+
+}
+
+
+
+
+
+
+.about_sien{
+  top: 470%;
+  width: 70%;
+  max-width: 600px;
+
+}
+
+
+
+
+#sien_video{
+top: 528%;
+width: 90%;
+
+}
+
+
+
+
+#posters{
+  top: 568%;
+
+
+}
+
+
+
+
+
+
+.imagegrid2{
+top: 650%;
+width: 90%;
+gap: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+#copyright{
+  top: 735%;
+}
+
+
+
+}
+
+
+
+
+
+

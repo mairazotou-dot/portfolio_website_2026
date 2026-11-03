@@ -1,0 +1,194 @@
+// CUSTOM CURSOR
+window.addEventListener("load", function () {
+    new cursoreffects.ghostCursor({
+        image: "cursor.png"
+    });
+});
+
+
+
+
+
+//CONTACT POP-UP
+
+const contactWord = document.getElementById("wordcontact"); 
+const popup = document.getElementById("contactcard");
+const closeBtn = document.getElementById("closePopup");
+
+// OPEN POPUP 
+contactWord.addEventListener("click", () => {
+  popup.style.display = "block";
+  contactWord.classList.add("active"); // Turns the button light blue
+});
+
+// CLOSE POPUP 
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+  contactWord.classList.remove("active"); // Returns the button to grey
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//header image sticky
+
+const headerImage = document.getElementById("header_image");
+const cardsImage  = document.getElementById("cards");
+
+let ticking = false;
+
+function updateHeader() {
+  const headerHeight = headerImage.offsetHeight;
+
+  // where the bottom edge of the header sits while it is "fixed"
+  const fixedBottom = window.innerHeight * 0.49 + headerHeight / 2;
+
+  // where the bottom edge of the cards image currently is
+  const cardsBottom = cardsImage.getBoundingClientRect().bottom;
+
+  // 0 while fixed; negative once the cards' bottom pushes it up
+  const offset = Math.min(0, cardsBottom - fixedBottom);
+
+  headerImage.style.transform =
+    `translate(-50%, calc(-50% + ${offset}px))`;
+
+  ticking = false;
+}
+
+function requestUpdate() {
+  if (!ticking) {
+    ticking = true;
+    requestAnimationFrame(updateHeader);
+  }
+}
+
+window.addEventListener("scroll", requestUpdate, { passive: true });
+window.addEventListener("resize", requestUpdate);
+headerImage.addEventListener("load", requestUpdate);
+cardsImage.addEventListener("load", requestUpdate);
+
+updateHeader();
+
+
+//header2 image sticky
+
+// ===== SIEN ICON SETTINGS =====
+const SIEN_START_TOP_DESKTOP = 658; // start position (% of screen height) on desktop
+const SIEN_START_TOP_MOBILE  = 425; // start position on mobile (title10 is at 405%, so ~20 below it)
+const SIEN_FIXED_TOP = 49;          // % from top of the screen where it stays while following
+const SIEN_STOP_EDGE = "bottom";    // "top" or "bottom" edge of the video
+const SIEN_GAP       = 0;           // px of space between the icon and the video edge
+
+const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+const sienIcon  = document.getElementById("sien_icon");
+const sienVideo = document.getElementById("sien_video");
+let sienTicking = false;
+
+function updateSien() {
+  const vh = window.innerHeight;
+  const h  = sienIcon.offsetHeight;
+
+  // pick the start position for the current screen size
+  const startTop = mobileQuery.matches ? SIEN_START_TOP_MOBILE : SIEN_START_TOP_DESKTOP;
+
+  // where the icon would be if it simply sat in the page at its start position
+  const startY = vh * (startTop / 100) - window.scrollY;
+
+  // where it stays on screen while following
+  const fixedY = vh * (SIEN_FIXED_TOP / 100);
+
+  // it scrolls with the page until it reaches the fixed spot, then stays there
+  let y = Math.max(fixedY, startY);
+
+  // stop at the video edge
+  const rect = sienVideo.getBoundingClientRect();
+  const edge = SIEN_STOP_EDGE === "top" ? rect.top : rect.bottom;
+  y = Math.min(y, edge - h / 2 - SIEN_GAP);
+
+  sienIcon.style.transform = `translate(-50%, calc(${y}px - 50%))`;
+  sienTicking = false;
+}
+
+function requestSienUpdate() {
+  if (!sienTicking) {
+    sienTicking = true;
+    requestAnimationFrame(updateSien);
+  }
+}
+
+window.addEventListener("scroll", requestSienUpdate, { passive: true });
+window.addEventListener("resize", requestSienUpdate);
+sienIcon.addEventListener("load", requestSienUpdate);
+sienVideo.addEventListener("loadedmetadata", requestSienUpdate);
+
+updateSien();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//reveals on scroll
+
+
+const revealItems = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.2 });
+revealItems.forEach(item => observer.observe(item));
+

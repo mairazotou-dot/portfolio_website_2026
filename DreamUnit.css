@@ -1,0 +1,1263 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+@view-transition {
+  navigation: auto;
+}
+
+
+html,body{
+  width: 100%;
+    min-height: 100%;
+    margin: 0;
+  background-color:white;
+  scroll-behavior: smooth;
+     overflow-x: hidden;
+
+
+}
+
+
+#page {
+    width: 100%;
+        min-height: 100vh;
+}
+
+::selection {
+  background: #fbd7ff;
+}
+
+
+
+
+#name{
+  position: fixed;
+  top: 110px;
+  width: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  cursor: pointer;  
+
+}
+
+
+
+
+
+
+
+
+
+
+.intro-container {
+position: absolute;
+   top: 110px;
+    width:250px;
+    left: 50%;
+  transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+    z-index: 200;
+
+}
+
+
+.pulse-glow-logo {
+  width: 250px; 
+ 
+
+  filter: drop-shadow(0 0 0px rgba(0, 191, 255, 0));
+  
+ 
+  animation: introPulse 1.2s ease-in-out 1;
+ 
+  transition: filter 0.4s ease-in-out;
+}
+
+
+.pulse-glow-logo:hover {
+  filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);}
+
+
+
+
+
+/*  The 3-Pulse  */
+@keyframes introPulse {
+  0% {
+    filter: drop-shadow(0 0 0px #a5bcff)
+          drop-shadow(0 0 0px #a5bcff);
+    
+  }
+  50% {
+   
+    filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+
+  }
+  
+}
+
+
+
+
+
+#portfolio{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ font-family: "Doto", sans-serif;
+  font-weight: regular;
+  font-size: 15px;
+  color: black;
+  z-index: 1001;
+}
+
+
+
+#lotus{
+  position: fixed;
+  top: 70px;
+  width: 3%;
+  left: 91%;
+  transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+  z-index: 1000;
+}
+#lotus:hover{
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+#insta{
+position: fixed;  
+top: 103px;
+left: 90%;
+font-family: "Source Sans 3", sans-serif;
+
+font-size: 15px;
+text-align: right;
+color: black;
+  text-decoration: none;
+z-index: 1000;
+
+}
+#insta:hover{
+  text-decoration: underline;
+  }
+
+
+#undie{
+  position: fixed;
+  top: 170px;
+  width: 3%;
+  left: 91%;
+  transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 6px #c7fffc)
+          drop-shadow(0 0 12px #c7fffc);
+         
+  z-index: 1000;
+}
+#undie:hover{
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+#playlist{
+position: fixed;  
+top: 200px;
+left: 90.5%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+  text-decoration: none;
+z-index: 1000;
+
+}
+#playlist:hover{
+  text-decoration: underline;
+  }
+
+
+
+
+#about{
+position: fixed;  
+top: 120px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #dcdce2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #dcdce2;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#about:hover {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color:#c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+
+
+#projects_button{
+position: fixed;  
+top: 60px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+background-color:#c7fffc;
+  border: 1px solid #c7fffc;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#projects_button:hover {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color:#c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#wordcontact{
+position: fixed;  
+top: 180px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #dcdce2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #dcdce2;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#wordcontact:hover,
+#wordcontact.active {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+#contactcard {
+  position: fixed;
+  top: 42%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  display: none; 
+  z-index: 1000;
+}
+
+#contactcard img {
+  width: 300px; 
+  display: block;
+}
+
+
+.contact-content {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 85%; 
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: left; 
+}
+
+
+.contact-content p {
+  margin: 1px 0; 
+  font-weight: bold;
+}
+
+
+.contact-content a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  transition: color 0.2s ease-in-out;
+}
+
+.contact-content a:hover {
+  color: #fbd7ff;
+}
+
+
+#closePopup {
+  position: absolute;
+  top: 136px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: lighter;
+  color: black;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#closePopup:hover {
+  color: #fbd7ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Moodboard Section (Fills exactly 1 screen viewport) */
+/* The Moodboard Section (fills exactly 1 screen viewport, nothing escapes it) */
+#moodboard {
+  position: absolute;   
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  background-image: url('images_dreamunit/rack_3.jpg');
+  background-size: 90% 90%;   /* this already stretches to fill the box, mobile included */
+  background-position: center;
+  background-repeat: no-repeat;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Shared behavior for anything you can drag (folders AND popups) */
+.draggable {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+
+/* Folder icons specifically */
+.mood-item {
+  padding: 1px;
+  border-radius: 14px;
+  transition: background-color 0.2s ease;
+}
+
+/* Colorful glow on hover, and it STAYS while the folder is "active" (clicked/selected) */
+.mood-item:hover,
+.mood-item.is-active {
+  background: rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.mood-item img,
+.mood-item video {
+  display: block;
+  width: 130px;            
+  height: auto;
+  pointer-events: none;   /* stops the browser's native "ghost drag" of the image */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.35));  
+}
+
+/* Popups are their own thing now — not sharing a class with folders anymore */
+.popup-item {
+  box-shadow: none;
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+.popup-item.loaded {
+  opacity: 1;
+}
+.popup-item img {
+  display: block;
+  width: 100%;     /* fills the popup div, which JS sizes to the image's real pixel dimensions */
+  height: 100%;
+  pointer-events: none;
+}
+
+/* The X button — style this however you like, this is just a starting look */
+.popup-close {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 30%;
+  background: #dcdce2;
+  color: black;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+.popup-close:hover {
+  background: #c7fffc;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+
+/* Phone version: hide the whole interactive desktop, keep the background, show a message instead */
+#mobile-message {
+  display: none;
+  position: absolute;
+  top: 7%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #fbd7ff;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 50px;
+  z-index: 5;
+}
+
+
+
+
+.skip {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Doto", sans-serif;
+  font-weight: normal;
+  font-size: 22px ;
+  color: black;         
+ text-transform: uppercase;
+ text-decoration: none;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px  #c7fffc) drop-shadow(0 0 3px #c7fffc) drop-shadow(0 0 6px #c7fffc) drop-shadow(0 0 12px #c7fffc);
+  z-index: 10;
+  
+}
+
+.skip:hover
+{ filter: drop-shadow(0 0 1px #fbd7ff)
+          drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);}
+
+
+
+
+.skip2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Doto", sans-serif;
+  font-weight: bold;
+  font-size: 20px ;
+  color: black;         
+ text-transform: uppercase;
+ text-decoration: none;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px  #fbd7ff) drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
+  z-index: 10;
+  
+}
+
+.skip2:hover
+{ filter: drop-shadow(0 0 1px #c7fffc)
+          drop-shadow(0 0 3px #c7fffc) drop-shadow(0 0 6px #c7fffc) drop-shadow(0 0 12px #c7fffc);}
+
+
+
+@media (max-width: 768px) {
+  #moodboard .draggable,
+  #moodboard #p1, .skip {
+    display: none;
+  }
+
+
+
+
+
+
+
+  #moodboard {
+    filter: blur(5px);
+     transition: filter 1s ease;
+  }
+
+
+#mobile-message, .skip2 {
+    display: flex;
+  }
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#p1{
+position: absolute;  
+top: 28%;
+left: 50%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 19px;
+transform: translate(-50%, -50%);
+text-align: center;
+color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#lips{
+  position: absolute;
+  top: 235%;
+  width: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Different reveal timing */
+#sister.visible { transition-delay: 0.2s; }
+#b.visible      { transition-delay: 0.2s; }
+#c.visible      { transition-delay: 0.4s; }
+
+
+
+/* ---------- Absolute sections, equal spacing inside ---------- */
+section {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);   /* centers the whole block */
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;                      /* the equal spacing: change this one number */
+}
+
+#merch   { top: 370%; }           /* same start as your original #title1 */
+#shopify { top: 565%; }           /* same start as your original #title2 */
+
+video, img { display: block; width: 100%; height: auto; }
+
+/* ---------- Merch ---------- */
+#title1 {
+  margin: 0;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 100;
+}
+
+#front {
+  width: 100%;
+  max-width: 420px;
+  mix-blend-mode: multiply;
+  z-index: 20;
+  cursor: grab;
+}
+
+#merch_des {
+  max-width: 500px;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 100;
+}
+#merch_des p { margin: 0 0 12px; }
+#merch_des p:last-child { margin-bottom: 0; }
+
+
+
+
+
+
+/* Tighten the space around the video (title1 → front → merch_des) */
+#merch > div:first-of-type {
+  margin-top: -50px;     /* pulls the video closer to #title1 */
+  margin-bottom: -50px;  /* pulls #merch_des closer to the video */
+}
+
+
+
+
+
+
+/* ---------- Shopify ---------- */
+#title2 {
+  margin: 0;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 100;
+}
+
+#webgif {
+  width: 100%;
+  max-width: 420px;
+  cursor: pointer;
+}
+
+#web_des {
+  max-width: 400px;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 100;
+}
+
+
+
+#dr{
+ color:#a5bcff ; 
+ text-decoration: none;
+}
+
+
+#dr:hover{
+ color:#fbd7ff ;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;                      /* keep equal to section gap */
+  width: 100%;
+}
+.gallery img { flex: 1 1 0; min-width: 0; }
+
+
+
+#shopify {
+  width: 95%;
+  max-width: 1400px;   /* was 1000px, raise for bigger images */
+}
+
+#shopify .gallery {
+  gap: 24px;           /* smaller gap = more room for the images */
+}
+
+
+
+#prints { rotate: -5deg; }
+#sister { rotate: 5deg; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*promo*/
+
+#promo {
+  top: 885%;             
+  width: 95%;
+  max-width: 1300px;      /* wide row = bigger posters */
+}
+
+#title3 {
+  margin: 0;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 100;
+}
+
+#pylon {
+  width: 100%;
+  max-width: 250px;       /* adjust to your preferred size */
+  margin-top: -5px;      /* tighter space under the title */
+  margin-bottom: -5px;   /* tighter space above the description */
+}
+
+#promo_des {
+  max-width: 450px;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 100;
+}
+
+#promo .gallery {
+  gap: 24px;
+}
+
+/* Posters reveal one after another */
+#poster1.visible { transition-delay: 0s; }
+#poster2.visible { transition-delay: 0.2s; }
+#poster3.visible { transition-delay: 0.4s; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Sign section ---------- */
+#sign {
+  top: 785% ;           /* placeholder, see note below */
+  width: 90%;
+  max-width: 1000px;
+}
+
+#title4 {
+  margin: 0;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 100;
+}
+
+#signvid {
+  width: 60%;
+  margin-top: -70px;      /* tighter space under the title */
+  margin-bottom: -70px; 
+  cursor: grab; 
+  
+}
+
+
+#sign_des {
+  max-width: 450px;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#events {
+  top: 670% ;          
+  max-width: 1000px;
+}
+
+#title5 {
+  margin: 0;
+  font-family: "Doto", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 100;
+}
+
+
+
+
+
+#event_des {
+  max-width: 450px;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 100;
+}
+
+
+
+
+
+
+
+/* Gallery wrapper: centred, so it sits nicely wherever you place it */
+.container {
+  width: min(850px, 100%);
+}
+
+/* Big slide box: every photo/video fits inside it without being cropped */
+.mySlides {
+  display: none;
+  aspect-ratio: 16 / 10;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mySlides img,
+.mySlides video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* "contain" = fit inside, never crop */
+  border-radius: 20px;
+}
+
+/* Arrow buttons over the big image */
+.prev, .next {
+  position: absolute;
+  top: 40%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  color: hotpink;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.prev { left: 12px; }
+.next { right: 12px; }
+.prev:hover, .next:hover { transform: scale(1.6);
+  transition: transform 0.3s ease-in-out; }
+
+.caption-container {
+  text-align: center;
+  min-height: 1.5em;
+font-family: "Source Sans 3", sans-serif;
+}
+
+/* Thumbnail row: scrolls sideways if there are many */
+.row {
+  display: flex;
+  gap: 10px;
+  padding: 8px 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+/* centers the thumbnails, and still lets you scroll if there are too many to fit */
+.column:first-child { margin-left: auto; }
+.column:last-child  { margin-right: auto; }
+
+
+
+
+.column {
+  flex: 0 0 auto;
+  width: 104px;
+  height: 68px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Thumbnails are small, blurry and clickable */
+.demo {
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  opacity: 0.7;
+  cursor: pointer;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.demo:hover { filter: blur(1px); 
+transition: filter 0.2s, opacity 0.2s;}
+
+/* The thumbnail of the current slide is sharp */
+.demo.active {
+  filter: none;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#copyright{
+  position: absolute;
+  top: 1040%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  color: black;
+   opacity: 0.6;
+   padding-bottom: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+#name{
+  width: 50%;
+}
+
+
+#lotus{
+width: 7%;
+  left: 89%;
+
+}
+
+#undie{
+width: 7%;
+  left: 89%;
+
+}
+
+
+
+#insta{
+top: 100px;
+left: 85%;
+
+}
+
+#playlist{
+  top: 197px; 
+left: 86%; 
+}
+
+#contactcard{
+  left: 33%;
+}
+
+#lips{
+top: 145%;
+}
+
+
+
+#title1{
+  top: 195%;
+}
+
+
+
+#front{
+ 
+  top: 240%;
+  width: 90%;
+
+  }
+
+
+
+
+
+#merch_des {
+  text-align: center;
+  max-width: 320px;
+}
+
+
+
+#web_des {
+  text-align: center;
+   max-width: 320px;
+}
+
+
+#promo_des {
+  text-align: center;
+   max-width: 320px;
+}
+
+
+#sign_des {
+  text-align: center;
+   max-width: 320px;
+}
+
+#event_des {
+  text-align: center;
+   max-width: 320px;
+}
+
+
+
+
+#sister{
+  width: 70%;
+  }
+
+
+
+
+
+#prints{
+  width: 65%;
+  left: 20%;
+
+
+  }
+
+
+
+#copyright{
+  top: 1087%;
+}
+
+
+  .section { gap: 40px; }
+
+  .gallery {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 420px;
+  }
+  .gallery img { flex: none; width: 100%; }
+
+
+  /* shorter delays once stacked */
+  #sister.visible, #b.visible, #c.visible { transition-delay: 0.1s; }
+
+
+
+  #merch   { top: 200%; }          
+#shopify { top: 420%; }   
+#events{ top: 600%; }    
+
+#sign { top: 690%; }  
+
+#promo { top: 780%; }  
+
+
+
+#promo .gallery {
+  max-width: 100%;
+}
+
+
+
+/* shorter delays once stacked */
+#poster2.visible, #poster3.visible { transition-delay: 0.1s; }
+
+#poster1.visible, #poster2.visible, #poster3.visible  { width:70%; }
+
+
+
+
+
+
+   
+
+#signvid {width: 80%; 
+margin-top: -25px;      /* tighter space under the title */
+  margin-bottom: -25px; }
+
+
+
+
+.prev, .next {
+  position: absolute;
+  top: 30%;
+ font-size: 22px;}
+}
+
+
+

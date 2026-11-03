@@ -1,0 +1,335 @@
+
+/*
+
+
+
+.pub-container {
+  position: relative;
+  width: 100vw;
+}
+
+/* 1. HORIZONTAL TAG BAR (Pinned directly in the middle layer of the screen)
+.pub-tag-window {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100vw;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none; /* Allows user to click images behind/through the text 
+  overflow: hidden;
+}
+
+.pub-tag-track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.pub-tag {
+  /* Dynamic widths to keep cross-alignment math simple and clean 
+  flex: 0 0 100vw; 
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 5vw; /* Bold, editorial typography scaling with screen width 
+  letter-spacing: 0.05em;
+  color: black;
+  
+  /* Blurry & Light default state */
+  font-weight: 300;
+  filter: blur(6px);
+  opacity: 0.15;
+  transition: filter 0.4s ease, opacity 0.4s ease, font-weight 0.4s ease;
+}
+
+/* Active tag state */
+.pub-tag.active-tag {
+  font-weight: 900;
+  filter: blur(0px);
+  opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+/* 2. VERTICAL GALLERY STREAM (Scrolls naturally) */
+.pub-stream {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25vh 0; /* Extra room on top/bottom so first/last items center perfectly */
+  gap: 15vh; /* Breathable spacing allowing multiple objects to be seen on screen */
+}
+
+.pub-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw; /* Significantly smaller size as requested */
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+/* Media containment */
+.pub-item .media-container {
+  width: 100%;
+  height: auto;
+  max-height: 45vh;
+  overflow: hidden;
+}
+
+.pub-item img,
+.pub-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Custom Zoom Class for Enlarge Toggle Functionality */
+.pub-item.enlarged {
+  position: relative;
+  z-index: 100; /* Overlaps text lines easily */
+  transform: scale(1.6); /* Enlarge factor (Change this freely) */
+}
+
+/* Ensure the layout transitions the size changes beautifully */
+.pub-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw; 
+  cursor: pointer;
+  
+  /* CHANGED: Added transform here so it scales up smoothly */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Dont show
+
+  <!-- Layout Container: Pins everything in place while you scroll normally 
+
+  <div class="pub-container">
+    
+    <!-- Central Intersecting Tag Bar (Fixed horizontally in the middle of the screen) 
+    <div class="pub-tag-window">
+      <div class="pub-tag-track" id="pubTagTrack">
+        <span class="pub-tag">Creative Coding</span>
+        <span class="pub-tag">SLEEZE magazine</span>
+        <span class="pub-tag">Dream Unit</span>
+        <span class="pub-tag">Sketchbook</span>
+        <span class="pub-tag">Editorial</span>
+      </div>s
+    </div>
+
+    <!-- Vertical Content Stream 
+    <main class="pub-stream">
+      
+      <!-- Project 1 (Starts active automatically) 
+      <div class="pub-item">
+        <div class="media-container">
+          <video src="videos/preview.mov" loop muted playsinline autoplay></video>
+        </div>
+      
+      </div>
+
+      <!-- Project 2 
+
+      <div class="pub-item" >
+        <div class="media-container">
+          <video src="videos/book_rotation.mov" loop muted playsinline></video>
+        </div>
+      </div>
+
+      <!-- Project 3 
+      <div class="pub-item" >
+        <div class="media-container">
+          <img src="images/files.jpeg" alt="Dream Unit">
+        </div>
+      </div>
+
+      <!-- Project 4 
+      <div class="pub-item" >
+        <div class="media-container">
+          <img src="images/cup.jpeg" alt="Sketchbook">
+        </div>
+        
+      </div>
+
+      <!-- Project 5 
+      <div class="pub-item" >
+        <div class="media-container">
+          <video src="videos/angel.mp4" loop muted playsinline></video>
+        </div>
+       
+      </div>
+
+    </main>
+  </div>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Magzine spreads
+
+
+const streamItems = document.querySelectorAll('.pub-item');
+const tagTrack = document.getElementById('pubTagTrack');
+const tags = document.querySelectorAll('.pub-tag');
+
+
+function handleVerticalScroll() {
+  const viewportCenter = window.innerHeight / 2;
+  let closestIndex = 0;
+  let minDistance = Infinity;
+
+  streamItems.forEach((item, index) => {
+    const rect = item.getBoundingClientRect();
+    const itemCenter = rect.top + (rect.height / 2);
+    const distanceToCenter = Math.abs(viewportCenter - itemCenter);
+
+    const video = item.querySelector('video');
+
+    // Track which element is physically closest to the vertical middle of your viewport
+    if (distanceToCenter < minDistance) {
+      minDistance = distanceToCenter;
+      closestIndex = index;
+    }
+
+    // Video Autoplay engine based on distance proximity
+    if (distanceToCenter < rect.height) {
+      if (video && video.paused) video.play().catch(() => {});
+    } else {
+      if (video && !video.paused) video.pause();
+    }
+  });
+
+  // Update horizontal tag track translation based on active index
+  // Shifts exactly by units of 100vw to keep each tag locked dead center
+  tagTrack.style.transform = `translateX(-${closestIndex * 100}vw)`;
+
+  // Update active text typography treatments (Bolder + Crisp)
+  tags.forEach((tag, idx) => {
+    if (idx === closestIndex) {
+      tag.classList.add('active-tag');
+    } else {
+      tag.classList.remove('active-tag');
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Attach listeners
+window.addEventListener('scroll', handleVerticalScroll);
+window.addEventListener('resize', handleVerticalScroll);
+
+// Replace the old click listener at the bottom of publication.js with this:
+streamItems.forEach(item => {
+  item.addEventListener('click', () => {
+    
+    // Check if the clicked item is already enlarged
+    if (item.classList.contains('enlarged')) {
+      // Second Click: Shrink back down to native portfolio grid layout size
+      item.classList.remove('enlarged');
+    } else {
+      // First Click: Clear any other enlarged items first, then zoom this one up
+      streamItems.forEach(i => i.classList.remove('enlarged'));
+      item.classList.add('enlarged');
+    }
+    
+  });
+});
+
+
+
+
+
+
+
+

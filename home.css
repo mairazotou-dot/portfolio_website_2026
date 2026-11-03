@@ -1,0 +1,853 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+
+@view-transition {
+  navigation: auto;
+}
+
+
+
+html,body{
+  width: 100%;
+    min-height: 100%;
+    margin: 0;
+  background-color:white;
+  scroll-behavior: smooth;
+     overflow-x: hidden;
+
+
+
+}
+
+
+#page {
+    width: 100%;
+        min-height: 100vh;
+}
+
+::selection {
+  background: #fbd7ff;
+}
+
+
+
+#name{
+	position: fixed;
+	top: 110px;
+	width: 20%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+	z-index: 1000;
+	cursor: pointer;	
+}
+
+
+
+
+
+
+
+
+/* Styling for your intro wrapper (optional) */
+.intro-container {
+position: absolute;
+	 top: 110px;
+    width:250px;
+    left: 50%;
+  transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+    z-index: 200;
+
+}
+
+/* Logo Styling */
+.pulse-glow-logo {
+  width: 250px; /* Adjust size as needed */
+ 
+  /*  Initial State: No glow */
+  filter: drop-shadow(0 0 0px rgba(0, 191, 255, 0));
+  
+  /*On Load Animation: Runs a 1.2-second pulse animation exactly 3 times */
+  animation: introPulse 1.2s ease-in-out 3;
+  
+  /* Post-Animation Transition: Smooth transition back to glow on hover */
+  transition: filter 0.4s ease-in-out;
+}
+
+/*  Hover State:  after the 3 intro pulses have finished */
+.pulse-glow-logo:hover {
+  filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);}
+
+
+
+
+
+/*  The 3-Pulse  */
+@keyframes introPulse {
+  0% {
+    filter: drop-shadow(0 0 0px #a5bcff)
+          drop-shadow(0 0 0px #a5bcff);
+    
+  }
+  50% {
+    /* Peak of the pulse: expands the glow and slightly scales the image up */
+    filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+
+  }
+  
+}
+
+
+
+
+
+
+
+
+#portfolio{
+	position: absolute;
+	top: 120px;
+	left: 50%;
+  transform: translate(-50%, -50%);
+ font-family: "Doto", sans-serif;
+  font-weight: regular;
+  font-size: 15px;
+  color: black;
+  z-index: 1001;
+
+
+}
+
+
+
+
+
+
+
+#lotus{
+	position: fixed;
+	top: 70px;
+	width: 3%;
+	left: 91%;
+	transition: transform 0.3s ease-in-out;
+	filter: drop-shadow(0 0 6px #a5bcff)
+          drop-shadow(0 0 12px #a5bcff);
+	z-index: 1000;
+}
+#lotus:hover{
+	transform: scale(1.5);
+	transition: transform 0.3s ease-in-out;
+}
+
+
+
+#insta{
+position: fixed;	
+top: 103px;
+left: 90%;
+font-family: "Source Sans 3", sans-serif;
+
+font-size: 15px;
+text-align: right;
+color: black;
+  text-decoration: none;
+z-index: 1000;
+
+}
+#insta:hover{
+	text-decoration: underline;
+	}
+
+
+#undie{
+	position: fixed;
+	top: 170px;
+	width: 3%;
+	left: 91%;
+	transition: transform 0.3s ease-in-out;
+	filter: drop-shadow(0 0 6px #c7fffc)
+          drop-shadow(0 0 12px #c7fffc);
+         
+	z-index: 1000;
+}
+#undie:hover{
+	transform: scale(1.5);
+	transition: transform 0.3s ease-in-out;
+}
+
+#playlist{
+position: fixed;	
+top: 200px;
+left: 90.5%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+  text-decoration: none;
+z-index: 1000;
+
+}
+#playlist:hover{
+	text-decoration: underline;
+	}
+
+
+
+
+#about{
+position: fixed;	
+top: 120px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #dcdce2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #dcdce2;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#about:hover {
+	transition: background-color 0.2s ease-in-out;
+	cursor: pointer;
+	background-color:#c7fffc;
+	border: 1px solid #c7fffc;
+}
+
+
+
+
+
+#projects_button{
+position: fixed;	
+top: 60px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #c7fffc;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #c7fffc;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+
+
+
+#projects_button:hover {
+	transition: background-color 0.2s ease-in-out;
+	cursor: pointer;
+	background-color:#c7fffc;
+	border: 1px solid #c7fffc;
+}
+
+
+
+
+
+
+
+
+#wordcontact{
+position: fixed;	
+top: 180px;
+left: 3%;
+font-family: "Source Sans 3", sans-serif;
+font-size: 15px;
+text-align: right;
+color: black;
+border: 1px solid #dcdce2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #dcdce2;
+  transition: background-color 0.2s ease-in-out;
+z-index: 1000;
+
+}
+  
+
+
+/* This applies the light blue color on hover AND when the active class is present */
+#wordcontact:hover,
+#wordcontact.active {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #c7fffc;
+  border: 1px solid #c7fffc;
+}
+
+
+#contactcard {
+  position: fixed;
+  top: 42%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  display: none; 
+  z-index: 1000;
+}
+
+#contactcard img {
+  width: 300px; 
+  display: block;
+}
+
+/* --- THE NEW SINGLE CONTAINER --- */
+.contact-content {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Locks this whole block exactly in the middle of the PNG */
+  width: 85%; /* Keeps text safely inside the boundaries of the image */
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  color: black;
+  text-align: left; /* Aligns the lines neatly */
+}
+
+/* Spaces out your lines evenly without breaking the layout */
+.contact-content p {
+  margin: 1px 0; 
+  font-weight: bold;
+}
+
+/* Styling for your links inside the container */
+.contact-content a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  transition: color 0.2s ease-in-out;
+}
+
+.contact-content a:hover {
+  color: #fbd7ff;
+}
+
+/* CLOSE BUTTON - Kept on top right of the card */
+#closePopup {
+  position: absolute;
+  top: 136px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: lighter;
+  color: black;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#closePopup:hover {
+  color: #fbd7ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tag-bar-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden; /* Hides background tags flowing off-screen */
+  pointer-events: none; /* User scrolls the gallery, not this text bar */
+  margin-top: 32vh; 
+  margin-bottom: 20px; /* Space between tags and the thumbnails */
+  z-index: 21;
+
+}
+
+.tag-spacer {
+  flex: 0 0 35vw; /* Perfectly matches your scroll-spacer width */
+}
+
+/* Default State: Light font weight & Blurry */
+.tag-item {
+  flex: 0 0 35vw; /* Perfectly matches your gallery-item width */
+  margin: 0 1vw;  /* Perfectly matches your gallery-item side margin */
+  text-align: center;
+  white-space: nowrap; 
+
+  font-family: "Doto", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-transform: uppercase;
+  /* The Philosophy: Light font and Blurry */
+  font-weight: regular;
+  opacity: 0.2;
+
+  transition: filter 0.4s ease, opacity 0.4s ease, font-weight 0.4s ease, color 0.4s ease;
+}
+
+/* Active State: Bold font weight & Crisp */
+.tag-item.active-tag {
+  color: black;
+  font-weight: bolder; 
+
+  opacity: 0.6;
+}
+
+/* Horizontal scrolling track container using native scroll snapping */
+
+.gallery-wrapper {
+position: absolute;
+top: 15vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  z-index: 20;
+
+  /* Hide scrollbar tracks across major browsers */
+  scrollbar-width: none; 
+}
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Padding chunks that ensure the first & last items line up in the exact center */
+.scroll-spacer {
+  flex: 0 0 35vw; 
+}
+
+/* Default Blur & Dimmed Side Items */
+.gallery-item {
+  flex: 0 0 35vw; /* Keeps layout consistent regardless of asset dimensions */
+  margin: 0 1vw;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Blurry state */
+  filter: blur(5px);
+  opacity: 0.7;
+  transform: scale(0.50);
+  transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+}
+
+
+.gallery-item[data-link="sketchbook.html"] {
+  margin-left: -18vw; /* pulls it closer to Selected Client Work */
+}
+
+
+/* Fluid handling for fluctuating content dimensions */
+
+.gallery-item video {
+max-width: 50vw;
+  max-height: 50vw;
+  object-fit: contain;
+
+}
+
+
+.gallery-item video.video-large {
+max-width: 75vw;
+  max-height: 75vw;
+
+  object-fit: contain;
+
+}
+
+
+
+
+.gallery-item img {
+  max-width: 40vw;
+  max-height: 40vw;
+  object-fit: contain;
+}
+
+.gallery-item img.image-large {
+  max-width: 50vw;
+  max-height: 50vw;
+  object-fit: contain;
+}
+
+
+/* Active Crisp Center Item Focus */
+.gallery-item.active {
+  filter: blur(0px);
+  opacity: 1;
+  transform: scale(0.70); /* Scales up dynamically without borders */
+  cursor: pointer;
+}
+
+/* Minimalist Word Captions */
+.gallery-item .caption {
+  margin-top: 15px;
+  display: block;
+  cursor: pointer;
+      font-family: "Doto", sans-serif;
+
+     text-align: center;
+  font-size: 25px;
+  color: black; 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, color 0.3s ease;
+}
+
+/* Shows the caption when the project clears up */
+.gallery-item.active .caption {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hover effects for the text independently */
+.gallery-item.active .caption:hover {
+    transition: opacity 0.4s ease, color 0.3s ease;
+    filter: drop-shadow(0 0 0.5px 
+#fbd7ff)
+          drop-shadow(0 0 2px 
+#fbd7ff)
+          drop-shadow(0 0 3.5px 
+#fbd7ff);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+ 
+
+
+
+
+
+
+
+
+
+
+
+#facecard{
+  position: absolute;
+  top: 108%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;     /* horizontal centering */
+  width: 15%;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+#facecard:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+
+}
+
+
+.note {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 480px;
+   line-height: 1.4;
+}
+
+.note p {
+  margin: 0 0 12px 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  text-align-last: center;
+  color: black;
+
+}
+
+
+
+.note .open{
+  margin: 0 0 12px 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  text-align-last: center;
+  color: black;
+  
+
+}
+
+
+
+
+#copyright{
+	position: absolute;
+	top: 170%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Source Sans 3", sans-serif;
+	font-size: 15px;
+  text-align: center;
+  font-style: italic;
+	color: black;
+	 opacity: 0.6;
+    padding-bottom: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+
+#name{
+  width: 50%;
+}
+
+
+#lotus{
+width: 7%;
+  left: 89%;
+
+}
+
+#undie{
+width: 7%;
+  left: 89%;
+
+}
+#insta{
+top: 100px;
+left: 85%;
+
+}
+
+#playlist{
+  top: 197px; 
+left: 87%; 
+}
+
+#contactcard{
+  left: 33%;
+}
+
+
+.tag-bar-wrapper {
+  margin-top: 35vh; 
+  margin-bottom: 20px; 
+}
+
+.tag-spacer {
+  flex: 0 0 70vw; 
+}
+
+
+.tag-item {
+  flex: 0 0 70vw; 
+  margin: 0 10vw;  
+}
+
+
+.scroll-spacer {
+  flex: 0 0 70vw; 
+}
+
+
+/* Default Blur & Dimmed Side Items */
+.gallery-item {
+  flex: 0 0 70vw; 
+  margin: 0 10vw;
+}
+
+.gallery-item img {
+  max-width: 100vw;
+  max-height: 100vw;
+  
+}
+
+.gallery-item video {
+max-width: 110vw;
+  max-height: 110vw;
+  
+}
+
+
+
+.gallery-item img.image-large {
+  max-width: 130vw;
+  max-height: 130vw;
+  
+}
+
+.gallery-item video.video-large {
+max-width: 190vw;
+  max-height: 190vw;
+  
+}
+
+#facecard{
+  
+  top: 100%;
+  width: 45%;
+}
+
+.note p{
+  text-align: center;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

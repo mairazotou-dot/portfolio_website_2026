@@ -1,0 +1,1134 @@
+ @import url("https://use.typekit.net/jkt3omu.css");
+ @import url("https://use.typekit.net/jkt3omu.css");
+
+
+@view-transition {
+  navigation: auto;
+}
+
+
+html,body{
+	background-color:#a5bdff;
+  scroll-behavior: smooth;
+}
+
+
+::selection {
+  color: #0000ff;
+  background: #a5bdff;
+}
+
+
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  padding: 1px 0;
+  position: fixed;
+  background:#0000ff ;
+  top: 0vh;
+	text-align: center;
+	width:100vw;
+font-family: "letter-gothic-std", monospace;
+	font-size:0.80vw ;color:white;
+	border-style: hidden;
+	z-index: 11;
+}
+
+
+
+.marquee:hover {
+    color: #0000ff;
+    background-color: white;
+}
+
+
+
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 50s linear infinite;
+}
+
+.marquee-content::after {
+  content: attr(data-text);
+  display: inline-block;
+}
+
+.marquee-content::after {
+  content: attr(data-text);
+  display: inline-block;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+.marquee2 {
+  width: 100%;
+  white-space: nowrap;
+  padding: 1px 0;
+  position: fixed;
+  background:none ;
+  top: 2vh;
+	text-align: center;
+	width:100vw;
+font-family: "letter-gothic-std", monospace;
+	font-size:1vw ;color:black;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 0.08vw;
+
+	z-index: 12;
+}
+
+
+.marquee2-content {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 100s linear infinite reverse;
+}
+
+.marquee2-content::after {
+  content: attr(data-text);
+  display: inline-block;
+}
+
+.marquee2-content::after {
+  content: attr(data-text);
+  display: inline-block;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60%);
+  }
+}
+
+
+
+
+
+#bareb{
+	position: relative;
+	width:100%;
+	top: -0.2vw;
+	z-index: 1;
+}
+
+
+
+#pretendback{
+	position: absolute;
+	width: 100vw;
+	top: 56vw;
+	z-index: 2;
+}
+
+  
+#could{
+	position: absolute;
+	width: 100vw;
+	top: 0vw;
+}
+
+
+
+
+
+
+
+#menu{
+position: fixed;	
+top: 2.6vw;
+left: 0vw;
+font-family: "letter-gothic-std", monospace;
+font-size: 2.85vw;
+color: white;
+text-decoration: none;
+background-color:#0000ff;
+padding: 0vw;
+z-index: 13;
+}
+
+#menu:hover {
+	color: #a5bdff;
+	background-color:#0000ff;
+}
+
+
+
+
+#home{
+position: fixed;	
+top: 2.6vw;
+left: 78vw;
+font-family: "letter-gothic-std", monospace;
+font-size: 2.85vw;
+font-weight: lighter;
+color: black;
+text-decoration: none;
+z-index: 13;
+}
+
+#home:hover {
+	color:#0000ff;
+	cursor: pointer;
+}
+
+
+
+
+
+#wordcontact{
+position: fixed;	
+top: 2.6vw;
+left: 87vw;
+font-family: "letter-gothic-std", monospace;
+font-size: 2.85vw;
+font-weight: lighter;
+text-align: right;
+color: black;
+z-index: 13;
+}
+
+
+
+#wordcontact:hover {
+	cursor: pointer;
+	color:#0000ff;
+}
+
+
+#contactcard {
+  position: fixed;
+  top: 40%;
+  left: 86.8vw;
+  transform: translate(-50%, -50%);
+
+  display: none; 
+  z-index: 20;
+}
+
+
+#contactcard img {
+  width: 400px; 
+  display: block;
+}
+
+/* CLOSE BUTTON */
+#closePopup {
+  position: absolute;
+  top: 127px;
+  right: 0.7vw;
+  background: none;
+  border: none;
+  font-size: 50px;
+  font-family: "letter-gothic-std", monospace;
+  font-weight: lighter;
+  color: white;
+  cursor: pointer;
+}
+
+#closePopup:hover {
+	color:#0000ff;
+
+}
+
+
+/* --- THE NEW SINGLE CONTAINER --- */
+.pop {
+	position: absolute;
+	top: 95px;
+	font-family: "letter-gothic-std", monospace;
+	font-size: 12pt;
+	text-decoration: none;
+	color: white;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Locks this whole block exactly in the middle of the PNG */
+  width: 85%; /* Keeps text safely inside the boundaries of the image */
+
+}
+
+/* Spaces out your lines evenly without breaking the layout */
+.pop p {
+	font-size: 10pt;
+  margin: 3px 0; 
+  text-decoration: underline;
+}
+
+/* Styling for your links inside the container */
+.pop a {
+	margin: 3px 0; 
+  text-decoration: none;
+  color:white;
+  font-weight: normal;
+  transition: color 0.2s ease-in-out;
+}
+
+.pop a:hover {
+  color:#0000ff;
+}
+
+
+/*
+#email{
+	position: absolute;
+	top: 70px;
+	right: 95px;
+	font-family: "letter-gothic-std", monospace;
+	font-size: 10pt;
+	text-decoration: none;
+	color: white;
+}
+
+#insta:hover {
+	color:#0000ff;
+}
+
+
+
+#insta{
+	position: absolute;
+	top: 48px;
+	right: 95px;
+	font-family: "letter-gothic-std", monospace;
+	font-size: 10pt;
+	text-decoration: none;
+	color: white;
+}
+
+#email:hover {
+	color:#0000ff;
+}
+
+
+#linked{
+	position: absolute;
+	top: 92.5px;
+	right: 95px;
+	font-family: "letter-gothic-std", monospace;
+	font-size: 10pt;
+	text-decoration: none;
+	color: white;
+}
+
+#linked:hover {
+	color:#0000ff;
+}
+
+*/
+
+
+#filler{
+	position: absolute;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:3vh ;color:white ;
+	background-color: none;
+	top: -0.3vh;
+	border-style: hidden;
+	text-align: center;
+}
+
+#filler:hover {
+	color:#0000ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+#project{
+	position: absolute;
+	top: 13vh;
+	left: 1vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:3vh ;color:black ;
+	text-decoration: none;
+z-index: 4;
+}
+ #project:hover {
+	color: #0000ff;
+}
+
+#heading{
+position: absolute;
+	top: 17vh;
+	left: 1vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 3vh;
+z-index: 4;
+}
+
+
+
+
+#pr1{
+position: absolute;
+	top: 20vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+
+    z-index: 4;
+}
+
+#pr1:hover {
+	background-color:#0000ff;
+    color: white;
+	cursor: pointer;
+}
+
+
+
+
+#pr2{
+position: absolute;
+	top: 22vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr2:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+#pr3{
+position: absolute;
+	top: 24vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr3:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+#pr4{
+position: absolute;
+	top: 26vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr4:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+#pr5{
+position: absolute;
+	top: 28vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr5:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+
+#pr6{
+position: absolute;
+	top: 30vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr6:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+#pr7{
+position: absolute;
+	top: 32vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr7:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+
+#pr8{
+position: absolute;
+	top: 34vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr8:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+
+#pr9{
+position: absolute;
+	top: 36vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr9:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+#pr10{
+position: absolute;
+	top: 38vh;
+	left: 0.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.2vh ;color:black ;
+	text-decoration: none;
+	word-spacing: 6.3vh;
+	background-color: none;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5px;
+	padding-right: 13px;
+    z-index: 4;
+}
+
+#pr10:hover {
+	background-color:#0000ff;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+#about{
+	position: absolute;
+	top: 38.5vh;
+	left: 1vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:3vh ;color:black ;
+	text-decoration: none;
+z-index: 4;
+}
+ #about:hover {
+	color: #0000ff;
+}
+
+#gr{
+	position: absolute;
+	top: 46.5vh;
+	left: 1vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.7vh ;color:black ;
+	text-decoration: none;
+z-index: 4;
+}
+
+.about-link1 span {
+  display: block;
+}
+
+#ab{
+	position: absolute;
+	top: 52vh;
+	left: 1vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.5vh ;color:black ;
+	text-decoration: none;
+z-index: 4;
+}
+
+.about-link span {
+  display: block;
+}
+
+
+
+
+#more{
+	position: absolute;
+	top: 59vh;
+	left: 1vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.3vh ;color:black ;
+	text-decoration: none;
+z-index: 4;
+}
+
+#more:hover {
+	color: #0000ff;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+
+
+#cig{
+	position: absolute;
+	top: 16.6vh;
+	left: 140vh;
+	width: 18%;
+	z-index: 7;
+}
+
+
+#pret{
+	position: absolute;
+	width: 25vw;
+	top: 33vw;
+	left: 50vw;
+	border-style: none;
+	z-index: 7;
+}
+
+
+#door{
+	position: absolute;
+	width: 22vw;
+	top: 9vw;
+	left: 23vw;
+	border-style: none;
+	z-index: 8;
+}
+
+
+
+
+#experience{
+  position: absolute;
+  top: 68vh;
+  left: 1.2vw;
+  font-family: "letter-gothic-std", monospace;
+
+  font-size: 3vh;
+  color: black;
+  text-decoration: none;
+  z-index: 14;
+}
+
+#experience:hover {
+  color: #0000ff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+#exp {
+  position: fixed;
+  top: 78%;
+  left: 86.6vw;
+  transform: translate(-50%, -50%);
+  display: none; 
+  z-index: 20;
+}
+
+#exp img {
+  width: 400px; 
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+#exp img:hover {
+  transform: scale(1.05);
+  filter: brightness(0) invert(1);
+}
+
+
+
+
+
+
+
+/* CLOSE BUTTON */
+#closebutton {
+  position: absolute;
+  top: 133px;
+  right: 0.7vw;
+  background: none;
+  border: none;
+  font-size: 50px;
+  font-family: "letter-gothic-std", monospace;
+  font-weight: lighter;
+  color: #cd00f5;
+  cursor: pointer;
+  z-index: 50;
+}
+
+#closebutton:hover {
+  color: white;
+}
+
+#head{
+  position: absolute;
+  font-family: "letter-gothic-std", monospace;
+  font-weight: lighter; 
+  font-size: 5vh;
+  color: #cd00f5;
+  background-color: transparent; 
+  top: -0.9vh;
+  border-style: hidden;
+}
+
+
+
+
+#head:hover {
+  color: white;
+}
+
+
+
+
+
+
+#magazine{
+	position: absolute;
+	top: 53%;
+	left: 23vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.8vh ;color:black ;
+	text-decoration: none;
+  z-index: 10;
+}
+
+#magazine:hover {
+color:#0000ff;
+	cursor: pointer;
+}
+
+
+
+#fashion{
+	position: absolute;
+	top: 53%;
+	left: 49.5vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.8vh ;color:black ;
+	text-decoration: none;
+  z-index: 10;
+}
+
+#fashion:hover {
+color:#0000ff;
+	cursor: pointer;
+}
+
+
+
+#code{
+	position: absolute;
+	top: 53%;
+	left: 76.7vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.8vh ;color:white ;
+	text-decoration: none;
+  z-index: 10;
+}
+
+#code:hover {
+color:#0000ff;
+	cursor: pointer;
+}
+
+
+#sketch{
+	position: absolute;
+	top: 96%;
+	left: 21.2vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.8vh ;color:black ;
+	text-decoration: none;
+  z-index: 10;
+}
+
+#sketch:hover {
+color:#0000ff;
+	cursor: pointer;
+}
+
+
+#edit{
+	position: absolute;
+	top: 96%;
+	left: 50vw;
+	font-family: "letter-gothic-std", monospace;
+	font-weight: light;
+	font-size:1.8vh ;color:black ;
+	text-decoration: none;
+  z-index: 10;
+}
+
+#edit:hover {
+color:#0000ff;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+.description{
+	position: absolute;
+	top: 203%;
+	left: 33px;
+	max-width: 500px;
+	line-height: 1.4;
+	font-family: "letter-gothic-std", monospace;
+	font-size:13px ;color:white;
+  z-index: 10;
+}
+
+.description h1{
+	max-width: 208px;
+	color: #0000ff;
+  background: #a5bdff;
+	font-size:17px
+}
+
+
+
+
+
+
+
+
+#bouncer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;  
+  filter: blur(2px) brightness(1.3)  ;        /* change the size here */
+  height: auto;
+  z-index: 999999;       /* on top of all other elements */
+  pointer-events: none;  /* clicks pass through to the page underneath */
+  user-select: none;
+	
+}
+ 
+
+
+/*
+#intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  will-change: backdrop-filter;
+
+  transition:
+    backdrop-filter 1.8s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-backdrop-filter 1.8s cubic-bezier(0.4, 0, 0.2, 1),
+    background 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#intro-overlay.visible {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+
+.intro-popup {
+  position: relative;
+  opacity: 0;
+  filter: blur(16px);
+  will-change: opacity, filter;
+  transition:
+    opacity 0.9s ease,
+    filter 0.9s ease;
+}
+
+#intro-overlay.visible .intro-popup {
+  opacity: 1;
+  filter: blur(0px);
+ 
+  transition:
+    opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
+    filter 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.intro-popup img {
+  display: block;
+  max-width: 50vw;
+  max-height: 45vh;
+}
+
+#intro-close {
+  position: absolute;
+  top: 295px;
+  right: 14.2px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.35s ease, transform 0.35s ease;
+  color: white;
+  font-family: "letter-gothic-std", monospace;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+
+
+
+#intro-close:hover {
+color:#0000ff;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+/* Phone version: hide the whole interactive desktop, keep the background, show a message instead */
+#mobile-message {
+  display: none;
+  position: absolute;
+  top: 2%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+color:#a5bdff;
+font-family: "letter-gothic-std", monospace;
+font-weight: bold;
+line-height: 1.4;
+  font-size: 50px;
+  z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  
+
+  .main{
+    filter: blur(7px);
+     transition: filter 1s ease;
+  }
+
+
+#mobile-message {
+    display: flex;
+  }
+
+#menu{
+	position: absolute;
+	font-size: 5vh;
+	color:#a5bdff ;
+	font-weight: bold;
+	top: 67%;
+	background-color: transparent;
+	transform: translate(-50%, -50%);
+	left: 50%;
+}
+
+#menu:hover {
+	background-color: transparent;
+color:#0000ff;
+}
+  
+}
+
+
+
+
+
