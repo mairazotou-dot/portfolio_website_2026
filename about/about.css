@@ -85,7 +85,7 @@ position: absolute;
 
 
 
-/*  The 3-Pulse  */
+
 @keyframes introPulse {
   0% {
     filter: drop-shadow(0 0 0px #a5bcff)
@@ -376,8 +376,8 @@ z-index: 1000;
   height: auto;
   mix-blend-mode: multiply;
   z-index: 1; 
-        /* on top of all other elements */
-  pointer-events: none;  /* clicks pass through to the page underneath */
+       
+  pointer-events: none;  
   user-select: none;
   
 }
@@ -460,7 +460,7 @@ z-index: 1000;
   top: 125%;
   left: 50%;
   width: 27%;
-  margin-left: -13.5%;   /* half of the 27% width */
+  margin-left: -13.5%;   
   z-index: 10;
 }
 
@@ -485,7 +485,7 @@ z-index: 1000;
     align-items: center;
   }
 
-  /* Force absolute positions out and turn blocks into clean stacked divs */
+  
   .title1, .title2, .title3, .title4, .title5,
  .reachout, .experience, .lang, .skills {
     position: static !important;
@@ -504,40 +504,28 @@ z-index: 1000;
     transform: none !important;
     padding: 0 !important;
     text-align: center !important;
-    
-    /* Centers the narrowed block horizontally on the phone screen */
     margin: 0 auto !important; 
-    
-    /* 
-       Limits the horizontal spread of the paragraph. 
-       Adjust this percentage (e.g., 75% or 80%) to make it tighter or wider!
-    */
     width: 70% !important; 
     max-width: 360px !important; 
   }
 
 
 
-  /* Structural Grouping Box to enforce equal spacing */
+  
   .section-group {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    /* 
-       👇 EQUAL GAP BETWEEN EACH COMPLETED BLOCK
-       Adjust this value to change space between sections 
-    */
     margin-bottom: 40px !important; 
   }
 
-  /* Pull first block down from your navigation layout area */
+  
   .section-group:first-of-type {
     margin-top: 180px !important;
   }
 
-  /* Ensure text aligns in center inside content arrays */
+  
   .artist-statement p, .reachout p {
     text-align: center !important;
     margin-top: 0 !important;
@@ -547,7 +535,7 @@ z-index: 1000;
 
 
 
-/* Text alignment for everything */
+
 
 .experience p, .experience h1,
 .lang p, .lang h1,
@@ -555,29 +543,26 @@ z-index: 1000;
   text-align: center !important;
 }
 
-/* Paragraphs: no bottom margin, the next h1 handles the gap */
+
 
 .experience p, .lang p, .skills p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-/* H1s: no space to their own p, more space above */
+
 .experience h1, .lang h1, .skills h1 {
   margin-top: 28px !important;
   margin-bottom: 0 !important;
 }
 
-/* No extra gap above the first h1 in each block */
+
 .experience h1:first-child,
 .lang h1:first-child,
 .skills h1:first-child {
   margin-top: 0 !important;
 }
-  /* 
-     👇 EQUAL GAP BETWEEN TITLE AND ITS PARAGRAPH
-     Locks titles down directly above their text content evenly
-  */
+  
   .title1, .title2, .title3, .title4, .title5 {
     margin-bottom: 20px !important;
   }
@@ -586,7 +571,7 @@ z-index: 1000;
 
 
 
-  /* Clean Middle Graphic Element Stacks */
+ 
   .cute p, .download-btn, #me {
     position: static !important;
     transform: none !important;

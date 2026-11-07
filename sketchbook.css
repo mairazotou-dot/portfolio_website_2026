@@ -82,7 +82,7 @@ position: absolute;
 
 
 
-/*  The 3-Pulse  */
+
 @keyframes introPulse {
   0% {
     filter: drop-shadow(0 0 0px #a5bcff)
@@ -419,12 +419,12 @@ z-index: 1000;
   display: block;
   cursor: zoom-in;
 
-  /* reveal state */
+  
   opacity: 0;
   transform: translateY(30px);
 
 
-  /* all three transitions together */
+  
   transition:
     opacity 0.7s ease,
     transform 0.6s ease,
@@ -442,7 +442,7 @@ z-index: 1000;
   filter: drop-shadow(0 0 9px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
 
-/* stagger only the reveal, not the hover */
+
 .imagegrid img:nth-child(even) {
   transition-delay: 0.1s, 0.1s, 0s;
 }
@@ -456,7 +456,7 @@ z-index: 1000;
   filter: drop-shadow(0 0 9px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
 
-/* once the reveal is done, drop the stagger delay so hover reacts instantly */
+
 .imagegrid img.settled {
   transition-delay: 0s;
 }
@@ -474,15 +474,15 @@ z-index: 1000;
 /* backdrop */
 #overlay {
   position: fixed;
-  inset: 0;                       /* top/right/bottom/left = 0 */
+  inset: 0;                       
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.5);    
-  backdrop-filter: blur(14px);             /* a bit more blur */
+  backdrop-filter: blur(14px);             
   -webkit-backdrop-filter: blur(14px);
   opacity: 0;
-  pointer-events: none;           /* can't be clicked while hidden */
+  pointer-events: none;           
   transition: opacity 0.5s ease;
   cursor: zoom-out;
   z-index: 1000;
@@ -493,7 +493,7 @@ z-index: 1000;
   pointer-events: auto;
 }
 
-/* the enlarged image */
+
 #overlay-img {
   max-width: 90vw;
   max-height: 90vh;
@@ -506,7 +506,7 @@ z-index: 1000;
 
 #overlay-img {
   cursor: crosshair;
-  touch-action: none; /* lets touch drag move the lens instead of scrolling */
+  touch-action: none; 
 }
 
 #lens {
@@ -516,10 +516,10 @@ z-index: 1000;
   border-radius: 50%;
   border: 2px solid #fbd7ff;
   box-shadow: 0 0 12px #fbd7ff, 0 8px 30px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.7); /* shows through transparent PNG areas */
+  background-color: rgba(255, 255, 255, 0.7); 
   background-repeat: no-repeat;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* so it never blocks mouse events on the image */
+  pointer-events: none; 
   opacity: 0;
   transition: opacity 0.2s ease;
 }

@@ -19,7 +19,10 @@ setupPopup(
   document.getElementById("closebutton")
 );
 
-// ====== BOUNCING IMAGE ======
+
+
+// BOUNCING IMAGE
+
 const SPEED = 180;
 const img = document.getElementById("bouncer");
 

@@ -84,7 +84,7 @@ position: absolute;
 
 
 
-/*  The 3-Pulse  */
+
 @keyframes introPulse {
   0% {
     filter: drop-shadow(0 0 0px #a5bcff)

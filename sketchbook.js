@@ -18,13 +18,13 @@ const closeBtn = document.getElementById("closePopup");
 // OPEN POPUP 
 contactWord.addEventListener("click", () => {
   popup.style.display = "block";
-  contactWord.classList.add("active"); // Turns the button light blue
+  contactWord.classList.add("active"); 
 });
 
 // CLOSE POPUP 
 closeBtn.addEventListener("click", () => {
   popup.style.display = "none";
-  contactWord.classList.remove("active"); // Returns the button to grey
+  contactWord.classList.remove("active"); 
 });
 
 
@@ -56,13 +56,11 @@ revealItems.forEach(item => observer.observe(item));
 
 
 
-
-
 const overlay = document.getElementById("overlay");
 const overlayImg = document.getElementById("overlay-img");
 const lens = document.getElementById("lens");
 
-let zoom = 3; // magnification level
+let zoom = 3; 
 
 document.querySelectorAll(".imagegrid img").forEach(img => {
   img.addEventListener("click", () => {
@@ -77,13 +75,16 @@ function closeOverlay() {
   lens.classList.remove("active");
 }
 
-// close only when clicking the backdrop, not the image
+
 overlay.addEventListener("click", (e) => {
   if (e.target !== overlayImg) closeOverlay();
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeOverlay();
 });
+
+
+
 
 // magnifier
 function moveLens(e) {
@@ -106,7 +107,7 @@ overlayImg.addEventListener("pointerup", (e) => {
   if (e.pointerType === "touch") lens.classList.remove("active");
 });
 
-// scroll wheel changes magnification (2x to 8x)
+
 overlayImg.addEventListener("wheel", (e) => {
   e.preventDefault();
   zoom = Math.min(8, Math.max(2, zoom + (e.deltaY < 0 ? 0.5 : -0.5)));

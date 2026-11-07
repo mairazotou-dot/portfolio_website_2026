@@ -18,13 +18,13 @@ const closeBtn = document.getElementById("closePopup");
 // OPEN POPUP 
 contactWord.addEventListener("click", () => {
   popup.style.display = "block";
-  contactWord.classList.add("active"); // Turns the button light blue
+  contactWord.classList.add("active"); 
 });
 
 // CLOSE POPUP 
 closeBtn.addEventListener("click", () => {
   popup.style.display = "none";
-  contactWord.classList.remove("active"); // Returns the button to grey
+  contactWord.classList.remove("active"); 
 });
 
 
@@ -63,12 +63,11 @@ function closeOverlay() {
   overlay.classList.remove("show");
 }
 
-// click a grid image: open it enlarged
+
 document.querySelectorAll(".imagegrid img").forEach(img => {
   img.addEventListener("click", () => openOverlay(img.src));
 });
 
-// click the enlarged image, the backdrop, or press Escape: close
 overlay.addEventListener("click", closeOverlay);
 
 document.addEventListener("keydown", (e) => {

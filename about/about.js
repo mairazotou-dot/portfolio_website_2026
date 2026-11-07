@@ -19,13 +19,13 @@ const closeBtn = document.getElementById("closePopup");
 // OPEN POPUP 
 contactWord.addEventListener("click", () => {
   popup.style.display = "block";
-  contactWord.classList.add("active"); // Turns the button light blue
+  contactWord.classList.add("active"); 
 });
 
 // CLOSE POPUP 
 closeBtn.addEventListener("click", () => {
   popup.style.display = "none";
-  contactWord.classList.remove("active"); // Returns the button to grey
+  contactWord.classList.remove("active"); 
 });
 
 
@@ -43,8 +43,7 @@ revealItems.forEach(item => observer.observe(item));
 
 
 
-
-// ====== BOUNCING VIDEO ======
+// BOUNCING VIDEO 
 const SPEED = 110;
 const el = document.getElementById("bouncer");
 

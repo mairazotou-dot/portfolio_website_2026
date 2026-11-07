@@ -18,13 +18,13 @@ const closeBtn = document.getElementById("closePopup");
 // OPEN POPUP 
 contactWord.addEventListener("click", () => {
   popup.style.display = "block";
-  contactWord.classList.add("active"); // Turns the button light blue
+  contactWord.classList.add("active"); 
 });
 
 // CLOSE POPUP 
 closeBtn.addEventListener("click", () => {
   popup.style.display = "none";
-  contactWord.classList.remove("active"); // Returns the button to grey
+  contactWord.classList.remove("active"); 
 });
 
 
@@ -57,13 +57,13 @@ let ticking = false;
 function updateHeader() {
   const headerHeight = headerImage.offsetHeight;
 
-  // where the bottom edge of the header sits while it is "fixed"
+  
   const fixedBottom = window.innerHeight * 0.49 + headerHeight / 2;
 
-  // where the bottom edge of the cards image currently is
+  
   const cardsBottom = cardsImage.getBoundingClientRect().bottom;
 
-  // 0 while fixed; negative once the cards' bottom pushes it up
+  
   const offset = Math.min(0, cardsBottom - fixedBottom);
 
   headerImage.style.transform =
@@ -89,12 +89,12 @@ updateHeader();
 
 //header2 image sticky
 
-// ===== SIEN ICON SETTINGS =====
-const SIEN_START_TOP_DESKTOP = 658; // start position (% of screen height) on desktop
-const SIEN_START_TOP_MOBILE  = 425; // start position on mobile (title10 is at 405%, so ~20 below it)
-const SIEN_FIXED_TOP = 49;          // % from top of the screen where it stays while following
-const SIEN_STOP_EDGE = "bottom";    // "top" or "bottom" edge of the video
-const SIEN_GAP       = 0;           // px of space between the icon and the video edge
+
+const SIEN_START_TOP_DESKTOP = 658; 
+const SIEN_START_TOP_MOBILE  = 425; 
+const SIEN_FIXED_TOP = 49;          
+const SIEN_STOP_EDGE = "bottom";    
+const SIEN_GAP       = 0;           
 
 const mobileQuery = window.matchMedia("(max-width: 768px)");
 
@@ -106,19 +106,19 @@ function updateSien() {
   const vh = window.innerHeight;
   const h  = sienIcon.offsetHeight;
 
-  // pick the start position for the current screen size
+  
   const startTop = mobileQuery.matches ? SIEN_START_TOP_MOBILE : SIEN_START_TOP_DESKTOP;
 
-  // where the icon would be if it simply sat in the page at its start position
+  
   const startY = vh * (startTop / 100) - window.scrollY;
 
-  // where it stays on screen while following
+  
   const fixedY = vh * (SIEN_FIXED_TOP / 100);
 
-  // it scrolls with the page until it reaches the fixed spot, then stays there
+  
   let y = Math.max(fixedY, startY);
 
-  // stop at the video edge
+  
   const rect = sienVideo.getBoundingClientRect();
   const edge = SIEN_STOP_EDGE === "top" ? rect.top : rect.bottom;
   y = Math.min(y, edge - h / 2 - SIEN_GAP);

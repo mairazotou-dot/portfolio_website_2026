@@ -83,7 +83,7 @@ position: absolute;
 
 
 
-/*  The 3-Pulse  */
+
 @keyframes introPulse {
   0% {
     filter: drop-shadow(0 0 0px #a5bcff)
@@ -390,7 +390,7 @@ z-index: 1600;
   transform: translateY(0);
 }
 
-/* one combined transition: reveal + hover glow */
+
 .imagegrid img.reveal {
   transition:
     opacity 0.6s ease,
@@ -398,7 +398,7 @@ z-index: 1600;
     filter 0.3s ease;
 }
 
-/* stagger only opacity and transform, not the glow */
+
 .imagegrid img.reveal:nth-child(even) {
   transition-delay: 0.2s, 0.2s, 0s;
 }
@@ -455,7 +455,7 @@ video.reveal {
   transition: filter 0.2s;
 }
 
-/* each link glows on its own hover, not the whole bar */
+
 .bar-link:hover {
   filter: drop-shadow(0 0 1px #a5bcff) drop-shadow(0 0 3px #a5bcff) drop-shadow(0 0 6px #a5bcff);
 }
@@ -476,7 +476,7 @@ video.reveal {
   top: 105%;
   left: 0;
   right: 0;
-  margin: 0 auto;      /* centers the block horizontally */
+  margin: 0 auto;     
   max-width: 450px;
   text-align: center;
 }
@@ -539,7 +539,6 @@ video.reveal {
   height: auto;
   display: block;
   cursor: zoom-in;
-  /* same filter list, fully transparent, so it can animate smoothly */
   filter:
     drop-shadow(0 0 1px rgba(251, 215, 255, 0))
     drop-shadow(0 0 3px rgba(251, 215, 255, 0))
@@ -554,7 +553,7 @@ video.reveal {
     drop-shadow(0 0 6px #fbd7ff);
 }
 
-/* backdrop */
+
 #overlay {
   position: fixed;
   inset: 0;
@@ -567,7 +566,7 @@ video.reveal {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-  overflow: hidden;            /* zoomed image never causes scrollbars */
+  overflow: hidden;            
   z-index: 1000;
 }
 
@@ -576,13 +575,13 @@ video.reveal {
   pointer-events: auto;
 }
 
-/* the enlarged image */
+
 #overlay-img {
   max-width: 90vw;
   max-height: 90vh;
   transform: scale(0.8);
   transition: transform 0.3s ease;
-  cursor: zoom-out;                  /* shows zoom-out while enlarged */
+  cursor: zoom-out;                 
   user-select: none;
   -webkit-user-drag: none;
 }

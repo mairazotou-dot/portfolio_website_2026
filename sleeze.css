@@ -379,7 +379,7 @@ z-index: 1600;
 .gallery {
   position: relative;
   height: 100vh;
-  height: 100dvh;              /* exactly one screen tall */
+  height: 100dvh;              
   overflow: hidden;
   z-index: 1500;
 }
@@ -388,30 +388,35 @@ z-index: 1600;
 
 .gallery .gallery__stage { position: relative; width: 100%; height: 100%; }
 
-/* ---------- 2. Dark overlay behind an enlarged item ---------- */
+
 .gallery .gallery__veil {
   position: absolute; inset: 0; z-index: 1;
-  background: white;                      /* overlay colour (darkness is set in gallery.js) */
+  background: white;                      
   opacity: 0; pointer-events: none;
 }
 
-/* ---------- 3. Text left / right of the gallery ---------- */
+
 .gallery .side {
   position: absolute;
   transform: translateY(-50%);
-  max-width: 300px;                      /* maximum width of the text columns */                                 
+  max-width: 300px;                         
 }
 
 
-.gallery .side p + p { margin-top: 14px; }  /* space between paragraphs */
-/* Hidden on narrow screens (no room beside the gallery). Change 700px or delete this rule. */
+.gallery .side p + p { margin-top: 14px; }  
+
+
+
+
+
+
 @media (max-width: 700px) { .gallery .side { display: none; } }
 
 
 
 
 
-/* ---------- 6. Counter and skip button ---------- */
+
 .gallery .counter { 
   font-family: "Doto", sans-serif;
   font-size: 18px; 
@@ -425,7 +430,7 @@ z-index: 1600;
 .gallery .skip {
   font-family: "Doto", sans-serif;
   font-size: 18px ;
-  color: black;          /* uses the side text colour and size */
+  color: black;          
  text-transform: uppercase;
  font-weight: normal;
   background: none;
@@ -452,12 +457,10 @@ z-index: 1600;
 
 
 
-
-/* ---------- 4. Gallery items ---------- */
 .gallery .g-item {
   position: absolute; left: 50%; z-index: 2;
-  background: none;                   /* shows where an image doesn't fill its box */
-  border-radius: none;                   /* rounded corners */
+  background: none;                   
+  border-radius: none;                   
   overflow: hidden;
   transform-origin: 50% 50%;
   will-change: transform, opacity, filter;
@@ -469,20 +472,17 @@ z-index: 1600;
 .gallery .g-item img,
 .gallery .g-item video {
   display: block; width: 100%; height: 100%;
-  object-fit: contain;                   /* contain = never cropped. Use "cover" to crop instead */
+  object-fit: contain;                   
   user-select: none; -webkit-user-drag: none;
 }
 
 
 
 
-/* ---------- 5. Cursors ---------- */
-/* Inactive items keep the pointer cursor (set on .g-item above) */
 
-/* Main item: the script gives the active item "filter: none", while neighbours are blurred */
 .gallery .g-item[style*="filter: none"] { cursor: zoom-in; }
 
-/* Main item while enlarged: the dark background only becomes clickable when an item is enlarged */
+
 .gallery:has(.gallery__veil[style*="pointer-events: auto"]) .g-item[style*="filter: none"] { cursor: zoom-out; }
 .gallery:has(.gallery__veil[style*="pointer-events: auto"]) .gallery__veil { cursor: zoom-out; }
 
@@ -696,22 +696,22 @@ position: absolute;
 
 .cont strong,
 .pro_des strong {
-  display: block;          /* lets it sit tight against the text below */
-  margin: 0;               /* no space between strong and its text */
+  display: block;          
+  margin: 0;               
   font-family: "Source Sans 3", sans-serif;
   font-size: 17px;
   color: black;
-  line-height: 1.4;        /* was 2, which added space below */
+  line-height: 1.4;        
   font-weight: normal;
 }
 
-/* the <br> after a block strong would add an empty line, so hide it */
+
 .cont strong + br,
 .pro_des strong + br {
   display: none;
 }
 
-/* space between one entry and the next strong */
+
 .cont > div,
 .pro_des > div {
   margin-bottom: 24px;
@@ -722,7 +722,7 @@ position: absolute;
   margin-bottom: 0;
 }
 
-/* text under the strong in the contributors list */
+
 .cont > div {
   font-family: "Source Sans 3", sans-serif;
   font-size: 15px;
@@ -764,15 +764,15 @@ position: absolute;
 /* backdrop */
 #overlay {
   position: fixed;
-  inset: 0;                       /* top/right/bottom/left = 0 */
+  inset: 0;                       
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.5);    
-  backdrop-filter: blur(14px);             /* a bit more blur */
+  backdrop-filter: blur(14px);             
   -webkit-backdrop-filter: blur(14px);
   opacity: 0;
-  pointer-events: none;           /* can't be clicked while hidden */
+  pointer-events: none;           
   transition: opacity 0.5s ease;
   cursor: zoom-out;
   z-index: 1000;
@@ -795,7 +795,7 @@ position: absolute;
 
 #overlay-img {
   cursor: crosshair;
-  touch-action: none; /* lets touch drag move the lens instead of scrolling */
+  touch-action: none; 
 }
 
 
@@ -808,10 +808,10 @@ position: absolute;
   border-radius: 50%;
   border: 2px solid #fbd7ff;
   box-shadow: 0 0 12px #fbd7ff, 0 8px 30px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.7); /* shows through transparent PNG areas */
+  background-color: rgba(255, 255, 255, 0.7); 
   background-repeat: no-repeat;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* so it never blocks mouse events on the image */
+  pointer-events: none; 
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -975,24 +975,25 @@ left: 86%;
   
 
 
-  /* ---------- the stacked column ---------- */
+  
+
   .section-group {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 70%;                 /* column width: try 70%, 75%, 85% */
+    width: 70%;                 
     max-width: 320px;
-    margin: 0 auto 70px auto;   /* centered; 10px = space between sections */
+    margin: 0 auto 70px auto;   
     position: static;
   }
 
-  /* MOVE EVERYTHING DOWN: change this number */
+
   .section-group:first-of-type {
     margin-top: 400px;
   }
 
-  /* ---------- reset the desktop absolute positioning ---------- */
+  
   .title1,
   .title2,
   .title3,
@@ -1013,13 +1014,13 @@ left: 86%;
     text-align: center;
   }
 
-  /* ---------- titles ---------- */
+  
   .title1,
   .title2,
   .title3,
   .title4
    {
-    margin-bottom: 12px;         /* gap between title and its text */
+    margin-bottom: 12px;         
   }
 
   .title1 p,
@@ -1030,7 +1031,7 @@ left: 86%;
     text-align: center;
   }
 
-  /* ---------- About Sleeze ---------- */
+
   .pub_des p {
     text-align: center;
   }
@@ -1039,7 +1040,7 @@ left: 86%;
     margin-bottom: 0;
   }
 
-  /* ---------- My Roles ---------- */
+ 
   .role_des p {
     text-align: center;
     margin-bottom: 0;
@@ -1056,7 +1057,7 @@ left: 86%;
 
 
 
-  /* ---------- Contributors ---------- */
+ 
   .cont {
     display: flex;
     flex-direction: column;
