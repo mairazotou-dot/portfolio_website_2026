@@ -384,64 +384,101 @@ z-index: 1000;
 
  
 
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 10vw 36vw 31vw minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto auto;
+  align-items: start;
+  padding-top: 25vh;
+  padding-bottom: 40px;
+}
+ 
+.section-group { margin-bottom: 40px; min-width: 0; }
+ 
+
+.sg-about      { grid-column: 2; grid-row: 1; }
+.sg-contact    { grid-column: 2; grid-row: 2; }
+.sg-experience { grid-column: 3; grid-row: 1; }
+.sg-education  { grid-column: 3; grid-row: 2; }
+.sg-skills     { grid-column: 4; grid-row: 1; }
+.sg-languages  { grid-column: 4; grid-row: 2; }
+ 
 .title1 {
-  position: absolute; top: 25%; left: 10%; font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder; 
+  font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder; 
   filter: drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
-
-.artist-statement { margin-top: 33vh; margin-left: 10vw; max-width: 375px; margin-bottom: 40px; }
+ 
+.artist-statement { max-width: 375px; }
 .artist-statement p { margin-top: 0; margin-bottom: 12px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: left; }
 #fun{
    filter: drop-shadow(0 0 1px #fbd7ff) drop-shadow(0 0 2px #fbd7ff); 
 }
-
-
-
+ 
+ 
+ 
 .title2 {
-  position: absolute; top: 87vh; left: 10vw; font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
+  font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
   filter: drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
-
-.reachout { margin-top: 12vh; margin-left: 10vw; max-width: 400px; }
+ 
+.reachout { max-width: 400px; }
 .reachout p { margin-top: 0; margin-bottom: 12px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
 .reachout a { cursor:pointer; color: black; }
 .reachout a:hover{color:#a5bcff }
-
-
-
+ 
+ 
+ 
 .title3 {
-  position: absolute; top: 25vh; left: 46vw; font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
+  font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
   filter: drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
-
-.experience { position: absolute; top: 33vh; margin-left: 46vw; max-width: 350px; margin-bottom: 40px; }
+ 
+.experience { max-width: 350px; }
 .experience h1 { margin-top: 24px; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-weight: normal; font-size: 17px; color: black; line-height: 1.4; text-align: justify; }
 #g{margin-top: 0px; }
 .experience p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 .title4 {
-  position: absolute; top: 76vh; left: 46vw; font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
+  font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
   filter: drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
-
-.lang { position: absolute; top: 73vh; margin-top: 12vh; margin-left: 46vw; max-width: 390px; margin-bottom: 40px; text-align: justify; }
+ 
+.lang { max-width: 300px; text-align: justify; }
 .lang h1 { margin-top: 24px; margin-bottom: 0px;  font-family: "Source Sans 3", sans-serif; font-weight: normal; font-size: 17px; color: black; line-height: 1.4; text-align: justify; }
 .lang p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
-
+ 
 .title5 {
-  position: absolute; top: 25vh; left: 77vw; font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
+  font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
   filter: drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
-
-.skills { position: absolute; top: 33vh; left: 77vw; max-width: 300px; margin-bottom: 40px; }
+ 
+.skills { max-width: 300px; }
 .skills h1 { margin-top: 24px; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-weight: normal; text-transform: uppercase; font-size: 17px; color: black; line-height: 1.4; text-align: justify; }
 .skills p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
+ 
 
+.cute { grid-column: 1 / -1; grid-row: 3; text-align: center; }
 .cute p {
-  position: absolute; top: 113vh; left: 50%; transform: translate(-50%, -50%); font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder; transition: transform 0.3s ease-in-out;
+  margin: -80px 0 0; font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder; transition: transform 0.3s ease-in-out;
   filter: drop-shadow(0 0 3px #a5bcff) drop-shadow(0 0 6px #a5bcff) drop-shadow(0 0 12px #a5bcff);
 }
-
+ 
 .download-btn {
   font-family: "Source Sans 3", sans-serif;
   font-size: 15px;
@@ -450,32 +487,33 @@ z-index: 1000;
   color: black;
   text-align: left;
 }
-
+ 
 .download-btn:hover {
   color: #a5bcff;
 }
  
 #me {
-  position: absolute;
-  top: 125%;
-  left: 50%;
+  grid-column: 1 / -1;
+  grid-row: 4;
+  justify-self: center;
+  display: block;
   width: 27%;
-  margin-left: -13.5%;   
+  margin-top: 20px;
   z-index: 10;
 }
-
-
+ 
+ 
 #copyright {
-  position: absolute; top: 183%; left: 50%; transform: translate(-50%, -50%); font-family: "Source Sans 3", sans-serif; font-size: 15px; text-align: center; font-style: italic; color: black; opacity: 0.6;  padding-bottom: 15px;
+  grid-column: 1 / -1; grid-row: 5; justify-self: center; margin: 70px 0 0; font-family: "Source Sans 3", sans-serif; font-size: 15px; text-align: center; font-style: italic; color: black; opacity: 0.6;  padding-bottom: 15px;
 }
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 @media (max-width: 768px) {
-
-
+ 
+ 
   .portfolio-container {
     padding: 20px;
     max-width: 480px;
@@ -484,7 +522,7 @@ z-index: 1000;
     flex-direction: column;
     align-items: center;
   }
-
+ 
   
   .title1, .title2, .title3, .title4, .title5,
  .reachout, .experience, .lang, .skills {
@@ -496,9 +534,9 @@ z-index: 1000;
     max-width: 100% !important;
     text-align: center !important;
   }
-
-
-
+ 
+ 
+ 
   .artist-statement {
     position: static !important;
     transform: none !important;
@@ -508,9 +546,9 @@ z-index: 1000;
     width: 70% !important; 
     max-width: 360px !important; 
   }
-
-
-
+ 
+ 
+ 
   
   .section-group {
     width: 100%;
@@ -519,44 +557,44 @@ z-index: 1000;
     align-items: center;
     margin-bottom: 40px !important; 
   }
-
+ 
   
   .section-group:first-of-type {
     margin-top: 180px !important;
   }
-
+ 
   
   .artist-statement p, .reachout p {
     text-align: center !important;
     margin-top: 0 !important;
     margin-bottom: 15px !important; 
   }
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
 .experience p, .experience h1,
 .lang p, .lang h1,
 .skills p, .skills h1 {
   text-align: center !important;
 }
-
-
-
+ 
+ 
+ 
 .experience p, .lang p, .skills p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-
-
+ 
+ 
 .experience h1, .lang h1, .skills h1 {
   margin-top: 28px !important;
   margin-bottom: 0 !important;
 }
-
-
+ 
+ 
 .experience h1:first-child,
 .lang h1:first-child,
 .skills h1:first-child {
@@ -566,11 +604,11 @@ z-index: 1000;
   .title1, .title2, .title3, .title4, .title5 {
     margin-bottom: 20px !important;
   }
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
  
   .cute p, .download-btn, #me {
     position: static !important;
@@ -579,12 +617,12 @@ z-index: 1000;
     display: block !important;
     margin: 0 auto 40px auto !important;
   }
-
+ 
   #me {
     width: 70% !important;
     
   }
-
+ 
  
   #copyright {
     left: 50%;
@@ -592,45 +630,40 @@ z-index: 1000;
     display: block !important;
     text-align: center !important;
     width: 100% !important;
-
+ 
   }
-
+ 
 #name{
   width: 50%;
 }
-
-
+ 
+ 
 #lotus{
 width: 7%;
   left: 89%;
-
+ 
 }
-
+ 
 #undie{
 width: 7%;
   left: 89%;
-
+ 
 }
 #insta{
 top: 100px;
 left: 85%;
-
+ 
 }
-
+ 
 #playlist{
   top: 197px; 
 left: 86%; 
 }
-
+ 
 #contactcard{
   left: 33%;
 }
-
-#title1{
-  top: ;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+ 
+ 
 }
-
-}
+ 
