@@ -411,8 +411,8 @@ z-index: 1000;
 .artist-statement { max-width: 375px; }
 .artist-statement p { margin-top: 0; margin-bottom: 12px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: left; }
 #fun{
-   filter: drop-shadow(0 0 1px #fbd7ff) drop-shadow(0 0 2px #fbd7ff); 
-}
+   filter: drop-shadow(0 0 1px #fbd7ff) drop-shadow(0 0 2px #fbd7ff); }
+
  
  
  
@@ -422,7 +422,7 @@ z-index: 1000;
 }
  
 .reachout { max-width: 400px; }
-.reachout p { margin-top: 0; margin-bottom: 12px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
+.reachout p { margin-top: 0; margin-bottom: 12px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: left; }
 .reachout a { cursor:pointer; color: black; }
 .reachout a:hover{color:#a5bcff }
  
@@ -434,12 +434,15 @@ z-index: 1000;
 }
  
 .experience { max-width: 350px; }
-.experience h1 { margin-top: 24px; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-weight: normal; font-size: 17px; color: black; line-height: 1.4; text-align: justify; }
+.experience h1 { margin-top: 24px; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-weight: normal; font-size: 17px; color: black; line-height: 1.4; text-align: left; }
 #g{margin-top: 0px; }
-.experience p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
+.experience p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: left; }
  
  
- 
+ #grey{
+  opacity: 100%;
+   filter: drop-shadow(0 0 1px #fbd7ff) drop-shadow(0 0 2px #fbd7ff);
+ }
  
  
  
@@ -459,9 +462,9 @@ z-index: 1000;
   filter: drop-shadow(0 0 3px #fbd7ff) drop-shadow(0 0 6px #fbd7ff) drop-shadow(0 0 12px #fbd7ff);
 }
  
-.lang { max-width: 300px; text-align: justify; }
-.lang h1 { margin-top: 24px; margin-bottom: 0px;  font-family: "Source Sans 3", sans-serif; font-weight: normal; font-size: 17px; color: black; line-height: 1.4; text-align: justify; }
-.lang p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
+.lang { max-width: 300px; text-align: left; }
+.lang h1 { margin-top: 24px; margin-bottom: 0px;  font-family: "Source Sans 3", sans-serif; font-weight: normal; font-size: 17px; color: black; line-height: 1.4; text-align: left; }
+.lang p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: left; }
  
 .title5 {
   font-family: "Doto", sans-serif; font-size: 20px; color: black; font-weight: bolder;
@@ -469,8 +472,8 @@ z-index: 1000;
 }
  
 .skills { max-width: 300px; }
-.skills h1 { margin-top: 24px; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-weight: normal; text-transform: uppercase; font-size: 17px; color: black; line-height: 1.4; text-align: justify; }
-.skills p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: justify; }
+.skills h1 { margin-top: 24px; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-weight: normal; text-transform: uppercase; font-size: 17px; color: black; line-height: 1.4; text-align:left; }
+.skills p { margin-top: 0; margin-bottom: 0px; font-family: "Source Sans 3", sans-serif; font-size: 15px; color: black; line-height: 1.4; text-align: left; }
  
 
 .cute { grid-column: 1 / -1; grid-row: 3; text-align: center; }
