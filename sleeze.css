@@ -15,8 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* overflow-x is set on body only. Setting it on both html and body turns body
-   into its own scroll container, which misbehaves on mobile browsers. */
+
 body {
   width: 100%;
   min-height: 100%;
@@ -35,7 +34,7 @@ body {
 }
 
 
-/* ---------- header / logo ---------- */
+
 
 #name {
   position: fixed;
@@ -87,8 +86,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Doto", sans-serif;
-  /* was "regular" (invalid, so the h3 default bold was used). 700 keeps the
-     look you had; change to 400 if you actually want regular weight. */
   font-weight: 700;
   font-size: 15px;
   color: black;
@@ -96,7 +93,7 @@ body {
 }
 
 
-/* ---------- social icons ---------- */
+
 
 #lotus {
   position: fixed;
@@ -154,7 +151,7 @@ body {
   text-decoration: underline;
 }
 
-/* hover-only effects: avoids "stuck" hover states after tapping on phones */
+
 @media (hover: hover) {
   #lotus:hover,
   #undie:hover {
@@ -163,7 +160,7 @@ body {
 }
 
 
-/* ---------- nav buttons ---------- */
+
 
 #about {
   position: fixed;
@@ -233,7 +230,7 @@ body {
 }
 
 
-/* ---------- contact card ---------- */
+
 
 #contactcard {
   position: fixed;
@@ -296,7 +293,7 @@ body {
 }
 
 
-/* ---------- gallery ---------- */
+
 
 .gallery {
   position: relative;
@@ -397,7 +394,7 @@ body {
 }
 
 
-/* ---------- floor + reveal ---------- */
+
 
 #floor {
   position: absolute;
@@ -428,7 +425,6 @@ body {
 }
 
 
-/* ---------- text sections (desktop: absolutely positioned) ---------- */
 
 .title1 {
   position: absolute;
@@ -582,7 +578,7 @@ body {
 }
 
 
-/* ---------- image grid + lightbox ---------- */
+
 
 .imagegrid {
   position: absolute;
@@ -664,10 +660,7 @@ body {
 }
 
 
-/* ---------- ending (artboard + dolls + footer) ---------- */
 
-/* wrapper is invisible on desktop so the absolute positions below behave
-   exactly as before; the mobile query turns it into a real box */
 .ending {
   display: contents;
 }
@@ -762,7 +755,7 @@ left: 86%;
 }
 
 
-  /* gallery counter + skip button were hidden on phones; show them at the bottom */
+ 
   .gallery .side {
     display: block;
     top: auto !important;
